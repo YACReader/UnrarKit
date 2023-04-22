@@ -105,7 +105,7 @@ os_activity_scope(activity);
 _Pragma( _stringify( clang diagnostic push ) ) \
 _Pragma( _stringify( clang diagnostic ignored "-Wformat-nonliteral" ) ) \
 _Pragma( _stringify( clang diagnostic ignored "-Wformat-security" ) ) \
-NSLog(_removeLogFormatTokens(format), ##__VA_ARGS__); \
+NSLog(format, ##__VA_ARGS__); \
 _Pragma( _stringify( clang diagnostic pop ) )
 
 // All levels do the same thing
