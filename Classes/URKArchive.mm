@@ -1320,6 +1320,10 @@ int CALLBACK AllowCancellationCallbackProc(UINT msg, long UserData, long P1, lon
 
 - (BOOL)_unrarOpenFile:(NSString *)rarFile inMode:(NSInteger)mode withPassword:(NSString *)aPassword error:(NSError * __autoreleasing *)error
 {
+    if (rarFile == nil) {
+    	return NO;
+    }
+    
     URKCreateActivity("-_unrarOpenFile:inMode:withPassword:error:");
 
     if (error) {
